@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Marc Nerez Web sample</title>
+</head>
+<body>
+
+<h1>This is mine bro</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>
