@@ -27,12 +27,31 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+#profile-intro  {
+	text-align: center;
+	}
+.center-content {
+  text-align: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  margin: 0 10px;
+}
+
 </style>
 </head>
 <body>
 
 <h1 style="color:blue;">Marc Nerez Personal Profile</h1>
 <h2 style="color:blue;"><strong>Introduction</strong></h2>
+
+<div id="profile-intro">
     <p>This is the very first time I'm attempting to do a website. I hope it works out!</p>
 
     <p>My name is <strong>Marc Angelo A. Nerez</strong>, as stated above, I am <strong>33 years old</strong>. This is my 2nd course, and I'm eager to learn more about developing programs.</p>
@@ -41,7 +60,8 @@ tr:nth-child(even) {
 
     <p>Previously, I was a <em>Sales Professional</em> for <em>Makati Ford</em>, and before that, I was a <em>Citiphone Officer</em> for <em>Citibank BGC</em>.</p>
 
-    <p>I'm from <em>Baguio City</em>!</p>
+    <p>I'm from <em>Baguio City</em>!</p> 
+	</div>
 	
 <h1 style="color:blue;"><strong>Personal Information</strong></h1>
     
@@ -120,6 +140,7 @@ tr:nth-child(even) {
 	<ul>
 	<li>Hard to find time to read a graphic novel</li>
 	<li>The stigma other people have that comics are for kids</li>
+
 	</ul>
 	</td>
   </tr>
@@ -160,13 +181,33 @@ tr:nth-child(even) {
 </table>
 
 <h1 style="color:blue;"><strong>Art that I'm into</strong></h1>
-<h2>Visual Arts</h2>
+<h2 style="color:white;">Visual Arts</h2>
+<div class="center-content">
 <p><strong>Jorge Jimenez</strong></p>
-<img src="Jorge jimenez.jpg" width= "700" Height="500" alt= Batman comics Characters> <img src="jorge jimenez2.jpg" width= "700" Height="500" alt= Justice league charging> <img src="jorge jimenez3.jpeg" width= "700" Height="500" alt= Current Justice league vs future justice league> 
-		<p><cite>DC 2 page spread illustrations by Jorge Jimenez</cite> by Jorge Jimenez.</p>
-<p><strong>Scott Walter AKA Miniac</strong></p>
-<img src="miniac1.jpg" width= "400" Height="600" alt= Eldar Miniature> <img src="miniac2.jpg" width= "400" Height="600" alt= Skeleton Warrior Miniature> <img src="miniac3.jpg" width= "400" Height="600" alt= Human Priestess Miniature>
-<p><cite>Miniatures painted by Scott Walter posted on his Instagram</cite></p>
+<div class="image-container">
+<img src="Jorge jimenez.jpg" width= "700" Height="500" alt= "Batman comics Characters"> <img src="jorge jimenez2.jpg" width= "700" Height="500" alt= "Justice league charging"> <img src="jorge jimenez3.jpeg" width= "700" Height="500" alt= "Current Justice league vs future justice league"> 
+	</div>
+	<p><cite>DC 2 page spread illustrations by Jorge Jimenez</cite> by Jorge Jimenez.</p>
+	</div>
+
+<div class="center-content">
+  <p><strong>Scott Walter AKA Miniac</strong></p>
+  <div class="image-container">
+    <img src="miniac1.jpg" alt="Eldar Miniature">
+    <img src="miniac2.jpg" alt="Skeleton Warrior Miniature">
+    <img src="miniac3.jpg" alt="Human Priestess Miniature">
+  </div>
+  <p><cite>Miniatures painted by Scott Walter posted on his Instagram</cite></p>
+</div>
+<div class="center-content">
+  <p><strong>Emil Nyström AKA Squidmar miniatures</strong></p>
+  <div class="image-container">
+    <img src="squidmar1.jpg" alt="Orc Miniature">
+    <img src="squidmar2.jpg" alt="Skeleton Warrior Miniature">
+    <img src="squidmar3.jpg" alt="Human Priestess Miniature">
+  </div>
+  <p><cite>Miniatures painted by Emil Nyström posted on his Instagram</cite></p>
+</div>
 
 </body>
 </html>
