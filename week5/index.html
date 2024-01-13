@@ -342,8 +342,6 @@ tr:nth-child(even) {
     checkBtn.addEventListener('change', function () {
       navbar.style.display = checkBtn.checked ? 'flex' : 'none';
     });
-
-    // Smooth scrolling for anchor links
     document.querySelectorAll('nav ul li a').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
