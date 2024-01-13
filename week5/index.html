@@ -172,6 +172,8 @@ tr:nth-child(even) {
 </nav>
 
 <div class="content">
+<h1 style="color:#00bfff;">Date you are viewing this page</h1>
+<p style="text-align: center;" id="demo"></p>
 <h1 style="color:#00bfff;">Marc Nerez Personal Profile</h1>
 <h2 style="color:#00bfff;"><strong>Introduction</strong></h2>
 <div id="profile-intro">
@@ -357,6 +359,8 @@ tr:nth-child(even) {
         }
       });
     });
+		const d = new Date();
+  document.getElementById("demo").innerHTML = d;
   });
 </script>
 </body>
