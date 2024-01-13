@@ -3,15 +3,49 @@
 <head>
 <title>Marc Nerez Personal Profile</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta charset="utf-8">
+<meta name="Makki's Profile" content="width=device-width, initial-scale=1.0">
+<link rel= "stylesheet" href="style.css">
 
 <style>
   body {
     background-color: black;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: Open Sans;
     display: flex;
     flex-direction: column;
   }
+nav {
+	background: #0082e6;
+	height: 80px;
+	width: 100%;
+	}
+label.logo{
+	height: 80px;
+	padding: 0 100px;
+	}
+nav ul {
+	float: right;
+	margin-right: 20px;
+	}
+nav ul li {
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+	}
+nav ul li a {
+	color: white;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;
+	}
+a.active,a:hover {
+	background: #1b9bff;
+	transition: .5s;
+	
+	
+
 
   .navbar {
     position: fixed;
@@ -87,12 +121,31 @@
     font-size: 24px;
     cursor: pointer;
   }
+  * {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  }
+  
 </style>
 </head>
 <body>
+
+
+<nav>
+<label class="logo">
+<img src="paletpal_logo.jpg" alt="Logo of Website">
+<ul>
+<li><a class="active" href="#">Introduction</a></li>
+<li><a href="#">Personal Information</a></li>
+<li><a href="#">Hobbies</a></li>
+<li><a href="#">Art that I'm into</a></li>
+</nav>
 <div class="navbar">
   <div class="toggle-btn" onclick="toggleNavbar()">☰</div>
-  <a href="#introduction">Introduction</a>
+
   <a href="#personal-info">Personal Information</a>
   <a href="#hobbies">Hobbies</a>
   <a href="#art">Art that I'm into</a>
@@ -260,18 +313,20 @@
 </div>
 </div>
 <script>
-  function toggleNavbar() {
+  document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector('.navbar');
-    const content = document.querySelector('.content');
+    navbar.style.marginTop = '0px';
+  });
 
-    if (navbar.style.marginTop === '0px') {
-      navbar.style.marginTop = '-60px';
-      content.style.marginTop = '20px';
-    } else {
-      navbar.style.marginTop = '0';
-      content.style.marginTop = '80px';
-    }
+function toggleNavbar() {
+  const navbar = document.querySelector('.navbar');
+
+  if (navbar.style.display === 'none' || navbar.style.display === '') {
+    navbar.style.display = 'flex';
+  } else {
+    navbar.style.display = 'none';
   }
+}
 </script>
 </body>
 </html>
