@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta name="Makki's Profile" content="width=device-width, initial-scale=1.0">
 <link rel= "stylesheet" href="style.css">
-
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <style>
   body {
     background-color: black;
@@ -19,10 +19,9 @@ nav {
 	background: #0082e6;
 	height: 80px;
 	width: 100%;
-	}
-label.logo{
-	height: 80px;
-	padding: 0 100px;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
 	}
 nav ul {
 	float: right;
@@ -36,88 +35,110 @@ nav ul li {
 nav ul li a {
 	color: white;
 	font-size: 17px;
-	padding: 7px 13px;
+	padding: 7px 90px;
 	border-radius: 3px;
 	text-transform: uppercase;
 	}
 a.active,a:hover {
 	background: #1b9bff;
 	transition: .5s;
-	
-	
-
-
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 98%;
-    background-color: #333333;
+	}
+.checkbtn {
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	curspr: pointer;
+	}
+#check {
+	display: none;
+	}
+@media (max-width: 9858px) {
+	label.logo {
+	padding-left: 50px;
+	}
+	nav ul li a {
+	font-size: 16px;
+	}
+}
+@media (max-width: 858px) {
+	.checkbtn {
+	display: block;
+	}
+	ul {
+	postiion: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #2c3e50;
+	top: 80px;
+	left: -100%;
+	text-align: center;
+	transition: all .5s;
+	}
+	nav ul li {
+	display: block;
+	margin: 50px 0;
+	line-height: 30px;
+	}
+	nav ul li a {
+	font-size: 20px;
+	}
+	a:hover,a.active {
+	background: none;
+	color: #0082e6;
+	}
+	#check: checked ~ ul {
+	left:0;
+	}
+} 
+.content {
     padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-  }
-
-  .navbar a:hover {
-    background-color: #555555;
-  }
-
-  .content {
-    padding: 20px;
-    margin-top: 20px;
+    margin-top: 100px;
     transition: margin-top 0.5s;
   }
-
-  p, li {
+p, li {
     color: white;
   }
-
-  h1, h2 {
+h1, h2 {
     text-align: center;
   }
-
-  table {
+table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
     color: white;
   }
 
-  td, th {
+td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
   }
 
-  tr:nth-child(even) {
+tr:nth-child(even) {
     background-color: #333333;
   }
 
-  #profile-intro {
+#profile-intro {
     text-align: center;
   }
 
-  .center-content {
+.center-content {
     text-align: center;
   }
 
-  .image-container {
+.image-container {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .image-container img {
+.image-container img {
     margin: 0 10px;
   }
 
-  .toggle-btn {
+.toggle-btn {
     font-size: 24px;
     cursor: pointer;
   }
@@ -135,21 +156,20 @@ a.active,a:hover {
 
 
 <nav>
-<label class="logo">
-<img src="paletpal_logo.jpg" alt="Logo of Website">
-<ul>
-<li><a class="active" href="#">Introduction</a></li>
-<li><a href="#">Personal Information</a></li>
-<li><a href="#">Hobbies</a></li>
-<li><a href="#">Art that I'm into</a></li>
-</nav>
 <div class="navbar">
-  <div class="toggle-btn" onclick="toggleNavbar()">☰</div>
-
-  <a href="#personal-info">Personal Information</a>
-  <a href="#hobbies">Hobbies</a>
-  <a href="#art">Art that I'm into</a>
+<input type="checkbox" id="check">
+<label for="check" class="checkbtn"> 
+<i class="fas fa-bars"></i>
+</label>
+<label class="logo">
+<img src="paletpal_logo.jpg" style="width: 70px; height: 80px; margin-left: 5px; margin-top: 0px;" alt="Logo of Website">
+<ul>
+<li><a class="active" href="#content">Introduction</a></li>
+<li><a href="#personal-info">Personal Information</a></li>
+<li><a href="#hobbies">Hobbies</a></li>
+<li><a href="#art">Art that I'm into</a></li>
 </div>
+</nav>
 
 <div class="content">
 <h1 style="color:#00bfff;">Marc Nerez Personal Profile</h1>
@@ -288,7 +308,7 @@ a.active,a:hover {
 <div class="center-content">
 <p><strong>Jorge Jimenez</strong></p>
 <div class="image-container">
-<img src="Jorge jimenez.jpg" width= "500" Height="300" alt= "Batman comics Characters"> <img src="jorge jimenez2.jpg" width= "500" Height="300" alt= "Justice league charging"> <img src="jorge jimenez3.jpeg" width= "500" Height="300" alt= "Current Justice league vs future justice league"> 
+<img src="Jorge jimenez.jpg" width= "400" Height="300" alt= "Batman comics Characters"> <img src="jorge jimenez2.jpg" width= "400" Height="300" alt= "Justice league charging"> <img src="jorge jimenez3.jpeg" width= "400" Height="300" alt= "Current Justice league vs future justice league"> 
 	</div>
 	<p><cite>DC 2 page spread illustrations by </cite>Jorge Jimenez.</p>
 	</div>
@@ -296,18 +316,18 @@ a.active,a:hover {
 <div class="center-content">
   <p><strong>Scott Walter AKA Miniac</strong></p>
   <div class="image-container">
-    <img src="miniac1.jpg" width= "500" Height="600" alt="Eldar Miniature">
-    <img src="miniac2.jpg" width= "500" Height="600" alt="Skeleton Warrior Miniature">
-    <img src="miniac3.jpg" width= "500" Height="600" alt="Human Priestess Miniature">
+    <img src="miniac1.jpg" width= "400" Height="500" alt="Eldar Miniature">
+    <img src="miniac2.jpg" width= "400" Height="500" alt="Skeleton Warrior Miniature">
+    <img src="miniac3.jpg" width= "400" Height="500" alt="Human Priestess Miniature">
   </div>
   <p><cite>Miniatures painted by Scott Walter posted on his Instagram</cite></p>
 </div>
 <div class="center-content">
   <p><strong>Emil Nyström AKA Squidmar miniatures</strong></p> 
   <div class="image-container">
-    <img src="squidmar1.jpg" width= "500" Height="600" alt="Orc Miniature">
-    <img src="squidmar2.jpg" width= "500" Height="600" alt="Skeleton Warrior Miniature">
-    <img src="squidmar3.jpg" width= "500" Height="600" alt="Human Priestess Miniature">
+    <img src="squidmar1.jpg" width= "400" Height="500" alt="Orc Miniature">
+    <img src="squidmar2.jpg" width= "400" Height="500" alt="Skeleton Warrior Miniature">
+    <img src="squidmar3.jpg" width= "400" Height="500" alt="Human Priestess Miniature">
   </div>
   <p><cite>Miniatures painted by Emil Nyström posted on his Instagram</cite></p>
 </div>
@@ -315,18 +335,29 @@ a.active,a:hover {
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector('.navbar');
-    navbar.style.marginTop = '0px';
+    const checkBtn = document.getElementById('check');
+
+    checkBtn.addEventListener('change', function () {
+      navbar.style.display = checkBtn.checked ? 'flex' : 'none';
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - navbar.offsetHeight,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
   });
-
-function toggleNavbar() {
-  const navbar = document.querySelector('.navbar');
-
-  if (navbar.style.display === 'none' || navbar.style.display === '') {
-    navbar.style.display = 'flex';
-  } else {
-    navbar.style.display = 'none';
-  }
-}
 </script>
 </body>
 </html>
