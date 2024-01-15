@@ -121,8 +121,24 @@ tr:nth-child(even) {
   }
 
 #profile-intro {
-    text-align: center;
-  }
+	display:flex;
+	align-items: center;
+	}
+#profile-intro img{
+    width: 250px;
+	height: 250px;
+    margin-right: 20px;
+	margin-left: 180px;
+	float: right;
+   }
+#profile-text{
+	flex: 1;
+	
+	}
+#profile-intro p {
+	margin: 0;
+	float: right;
+	}
 
 .center-content {
     text-align: center;
@@ -164,7 +180,7 @@ tr:nth-child(even) {
 <label class="logo">
 <img src="paletpal_logo.jpg" style="width: 70px; height: 80px; margin-left: 5px; margin-top: 0px;" alt="Logo of Website">
 <ul>
-<li><a class="active" href="#content">Introduction</a></li>
+<li><a class="active" href="#profile-intro">Introduction</a></li>
 <li><a href="#personal-info">Personal Information</a></li>
 <li><a href="#hobbies">Hobbies</a></li>
 <li><a href="#art">Art that I'm into</a></li>
@@ -173,22 +189,24 @@ tr:nth-child(even) {
 
 <div class="content">
 <h1 style="color:#00bfff;"id="demo"></h1>
+<br>
 <p style="text-align: center;" id="currentdate"></p>
+<br>
 <h1 style="color:#00bfff;">Marc Nerez Personal Profile</h1>
 <h2 style="color:#00bfff;"><strong>Introduction</strong></h2>
 <div id="profile-intro">
-    <p>This is the very first time I'm attempting to do a website. I hope it works out!</p>
+	<img src="ART AND THE ARTIST.jpg" alt="art vs artist picture">
+    <p>This is the very first time I'm attempting to do a website. I hope it works out! <br>
+    My name is <strong>Marc Angelo A. Nerez</strong>, as stated above, I am <strong>34 years old</strong>. This is my 2nd course, and I'm eager to learn more about developing programs.<br>
 
-    <p>My name is <strong>Marc Angelo A. Nerez</strong>, as stated above, I am <strong>33 years old</strong>. This is my 2nd course, and I'm eager to learn more about developing programs.</p>
+    I have two kids and i'm currently working as a <em>Customer Relations Manager</em> for a security agency. My work includes traveling locally if needed.<br>
 
-    <p>I have two kids and i'm currently working as a <em>Customer Relations Manager</em> for a security agency. My work includes traveling locally if needed.</p>
+    Previously, I was a <em>Sales Professional</em> for <em>Makati Ford</em>, and before that, I was a <em>Citiphone Officer</em> for <em>Citibank BGC</em>.<br>
 
-    <p>Previously, I was a <em>Sales Professional</em> for <em>Makati Ford</em>, and before that, I was a <em>Citiphone Officer</em> for <em>Citibank BGC</em>.</p>
-
-    <p>I'm from <em>Baguio City</em>!</p> 
+	I'm from <em>Baguio City</em>!</p> 
 	</div>
 	
-<h1 id="personal-info" style="color:#00bfff;"><strong>Personal Information</strong></h1>
+<h1 id="personal-info" style="color:#00bfff;"><strong>Personal Information</strong></h1> <br>
     
     <ul>
         <li style="background-color: powderblue; color: black;"><strong>Full Name:</strong> Marc Angelo A. Nerez</li>
@@ -209,7 +227,7 @@ tr:nth-child(even) {
         <li><strong>Goals in Life:</strong> To live a comfortable life</li>
         <li><strong>Dream to Fulfill:</strong> I’m still figuring that out as of now. Having kids makes your dream change constantly.</li>
         <li><strong>Other Interesting Aspects:</strong> I have two kids, I’m currently working at a security agency, and the last time I attended college was way back in 2014 after I finished my course in Business.</li>
-    </ul>
+    </ul><br>
 
 
 
@@ -217,7 +235,7 @@ tr:nth-child(even) {
 
 <table>
   <tr>
-    <th>Hobby</th>
+    <th>Hobby</th> <br>
     <th>Best things about it</th>
     <th>Worst things about it</th>
   </tr>
@@ -304,35 +322,45 @@ tr:nth-child(even) {
 	</td>
   </tr>
 </table>
-
-<h1 id="art" style="color:#00bfff;"><strong>Art that I'm into</strong></h1>
-<h2 style="color:white;">Visual Arts</h2>
+<br>
+<h1 id="art" style="color:#00bfff;"><strong>Art that I'm into</strong></h1> <br>
+<h2 style="color:white;">Visual Arts</h2> <br>
 <div class="center-content">
-<p><strong>Jorge Jimenez</strong></p>
+<p style="font-size: 30px;"><strong>Jorge Jimenez</strong></p> <br>
+<div class="image-container">
+<img src="Jorge jimenez.jpg" width= "600" Height="400" alt= "Batman comics Characters"> 
+<img src="jorge jimenez2.jpg" width= "600" Height="400" alt= "Justice league charging"> 
+<img src="jorge jimenez3.jpeg" width= "600" Height="400" alt= "Current Justice league vs future justice league"> 
+	</div> <br>
+	<p><cite>DC 2 page spread illustrations by </cite>Jorge Jimenez.</p> <br>
+	</div>
+
+<div class="center-content">
+<p style="font-size: 30px;"><strong>Scott Walter AKA Miniac</strong></p> <br>
+  <div class="image-container">
+    <img src="miniac1.jpg" width= "600" Height="700" alt="Eldar Miniature">
+    <img src="miniac2.jpg" width= "600" Height="700" alt="Skeleton Warrior Miniature">
+    <img src="miniac3.jpg" width= "600" Height="700" alt="Human Priestess Miniature">
+  </div> <br>
+  <p><cite>Miniatures painted by Scott Walter posted on his Instagram (https://www.instagram.com/miniacal_/)</cite></p> <br>
+</div>
+<div class="center-content">
+<p style="font-size: 30px;"><strong>Emil Nyström AKA Squidmar miniatures</strong></p> <br>
+  <div class="image-container">
+    <img src="squidmar1.jpg" width= "600" Height="700" alt="Orc Miniature">
+    <img src="squidmar2.jpg" width= "600" Height="700" alt="Skeleton Warrior Miniature">
+    <img src="squidmar3.jpg" width= "600" Height="700" alt="Human Priestess Miniature">
+  </div> <br>
+  <p><cite>Miniatures painted by Emil Nyström posted on his Instagram (https://www.instagram.com/squidmarminiatures/)</cite></p>
+</div> <br>
+<h2 style="color:white;">Music</h2> <br>
+<div class="center-content">
+<p style="font-size: 30px;"><strong>Jorge Jimenez</strong></p> <br>
 <div class="image-container">
 <img src="Jorge jimenez.jpg" width= "400" Height="300" alt= "Batman comics Characters"> <img src="jorge jimenez2.jpg" width= "400" Height="300" alt= "Justice league charging"> <img src="jorge jimenez3.jpeg" width= "400" Height="300" alt= "Current Justice league vs future justice league"> 
+	</div> <br>
+	<p><cite>DC 2 page spread illustrations by </cite>Jorge Jimenez.</p> <br>
 	</div>
-	<p><cite>DC 2 page spread illustrations by </cite>Jorge Jimenez.</p>
-	</div>
-
-<div class="center-content">
-  <p><strong>Scott Walter AKA Miniac</strong></p>
-  <div class="image-container">
-    <img src="miniac1.jpg" width= "400" Height="500" alt="Eldar Miniature">
-    <img src="miniac2.jpg" width= "400" Height="500" alt="Skeleton Warrior Miniature">
-    <img src="miniac3.jpg" width= "400" Height="500" alt="Human Priestess Miniature">
-  </div>
-  <p><cite>Miniatures painted by Scott Walter posted on his Instagram</cite></p>
-</div>
-<div class="center-content">
-  <p><strong>Emil Nyström AKA Squidmar miniatures</strong></p> 
-  <div class="image-container">
-    <img src="squidmar1.jpg" width= "400" Height="500" alt="Orc Miniature">
-    <img src="squidmar2.jpg" width= "400" Height="500" alt="Skeleton Warrior Miniature">
-    <img src="squidmar3.jpg" width= "400" Height="500" alt="Human Priestess Miniature">
-  </div>
-  <p><cite>Miniatures painted by Emil Nyström posted on his Instagram</cite></p>
-</div>
 </div>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
