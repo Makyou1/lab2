@@ -145,7 +145,7 @@ tr:nth-child(even) {
   }
 
 .image-container {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
   }
@@ -323,35 +323,36 @@ tr:nth-child(even) {
   </tr>
 </table>
 <br>
-<h1 id="art" style="color:#00bfff;"><strong>Art that I'm into</strong></h1> <br>
+<h1 id="art" style="color:#00bfff;"><strong>Art that I'm into (click the name to reveal their art)</strong></h1> <br>
 <h2 style="color:white;">Visual Arts</h2> <br>
 <div class="center-content">
-<p style="font-size: 30px;"><strong>Jorge Jimenez</strong></p> <br>
-<div class="image-container">
-<img src="Jorge jimenez.jpg" width= "600" Height="400" alt= "Batman comics Characters"> 
-<img src="jorge jimenez2.jpg" width= "600" Height="400" alt= "Justice league charging"> 
-<img src="jorge jimenez3.jpeg" width= "600" Height="400" alt= "Current Justice league vs future justice league"> 
-	</div> <br>
-	<p><cite>DC 2 page spread illustrations by </cite>Jorge Jimenez.</p> <br>
-	</div>
+  <p style="font-size: 30px; cursor: pointer;" onclick="toggleImages('jorgeJimenez')"><strong>Jorge Jimenez</strong></p> <br>
+  <div class="image-container" id="jorgeJimenez">
+    <img src="Jorge jimenez.jpg" width="600" height="400" alt="Batman comics Characters">
+    <img src="jorge jimenez2.jpg" width="600" height="400" alt="Justice league charging">
+    <img src="jorge jimenez3.jpeg" width="600" height="400" alt="Current Justice league vs future justice league">
+  </div> <br>
+  <p><cite>DC 2 page spread illustrations by </cite>Jorge Jimenez.</p> <br>
+</div>
 
 <div class="center-content">
-<p style="font-size: 30px;"><strong>Scott Walter AKA Miniac</strong></p> <br>
-  <div class="image-container">
-    <img src="miniac1.jpg" width= "600" Height="700" alt="Eldar Miniature">
-    <img src="miniac2.jpg" width= "600" Height="700" alt="Skeleton Warrior Miniature">
-    <img src="miniac3.jpg" width= "600" Height="700" alt="Human Priestess Miniature">
+  <p style="font-size: 30px; cursor: pointer;" onclick="toggleImages('scottWalter')"><strong>Scott Walter AKA Miniac</strong></p> <br>
+  <div class="image-container" id="scottWalter">
+    <img src="miniac1.jpg" width="600" height="700" alt="Eldar Miniature">
+    <img src="miniac2.jpg" width="600" height="700" alt="Skeleton Warrior Miniature">
+    <img src="miniac3.jpg" width="600" height="700" alt="Human Priestess Miniature">
   </div> <br>
-  <p><cite>Miniatures painted by Scott Walter posted on his Instagram (https://www.instagram.com/miniacal_/)</cite></p> <br>
+  <p><cite>Miniatures painted by Scott Walter posted on his Instagram (<a href="https://www.instagram.com/miniacal_/" target="_blank">link</a>)</cite></p> <br>
 </div>
+
 <div class="center-content">
-<p style="font-size: 30px;"><strong>Emil Nyström AKA Squidmar miniatures</strong></p> <br>
-  <div class="image-container">
-    <img src="squidmar1.jpg" width= "600" Height="700" alt="Orc Miniature">
-    <img src="squidmar2.jpg" width= "600" Height="700" alt="Skeleton Warrior Miniature">
-    <img src="squidmar3.jpg" width= "600" Height="700" alt="Human Priestess Miniature">
+  <p style="font-size: 30px; cursor: pointer;" onclick="toggleImages('emilNystrom')"><strong>Emil Nyström AKA Squidmar miniatures</strong></p> <br>
+  <div class="image-container" id="emilNystrom">
+    <img src="squidmar1.jpg" width="600" height="700" alt="Orc Miniature">
+    <img src="squidmar2.jpg" width="600" height="700" alt="Skeleton Warrior Miniature">
+    <img src="squidmar3.jpg" width="600" height="700" alt="Human Priestess Miniature">
   </div> <br>
-  <p><cite>Miniatures painted by Emil Nyström posted on his Instagram (https://www.instagram.com/squidmarminiatures/)</cite></p>
+  <p><cite>Miniatures painted by Emil Nyström posted on his Instagram (<a href="https://www.instagram.com/squidmarminiatures/" target="_blank">link</a>)</cite></p>
 </div> <br>
 
 <script>
@@ -362,7 +363,6 @@ tr:nth-child(even) {
     checkBtn.addEventListener('change', function () {
       navbar.style.display = checkBtn.checked ? 'flex' : 'none';
     });
-
     document.querySelectorAll('nav ul li a').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -378,64 +378,27 @@ tr:nth-child(even) {
         }
       });
     });
+		const d = new Date();
+  document.getElementById("currentdate").innerHTML = d;
+  
+  let answer1 = "You";
+  let answer2 = " are viewing my Website";
+  let answer3 = ' at this specific date and time'; 
 
-    const d = new Date();
-    document.getElementById("currentdate").innerHTML = d;
-
-    let answer1 = "You";
-    let answer2 = " are viewing my Website";
-    let answer3 = ' at this specific date and time';
-
-    document.getElementById("demo").innerHTML +=
-      "<br>" + answer1 + answer2 + answer3;
-
-    const artists = {
-      jorgeJimenez: {
-        name: "Jorge Jimenez",
-        images: [
-          "Jorge jimenez.jpg",
-          "jorge jimenez2.jpg",
-          "jorge jimenez3.jpeg"
-        ],
-        description: "DC 2 page spread illustrations by Jorge Jimenez."
-      },
-      scottWalter: {
-        name: "Scott Walter AKA Miniac",
-        images: [
-          "miniac1.jpg",
-          "miniac2.jpg",
-          "miniac3.jpg"
-        ],
-        description: "Miniatures painted by Scott Walter posted on his Instagram (https://www.instagram.com/miniacal_/)"
-      },
-      emilNystrom: {
-        name: "Emil Nyström AKA Squidmar miniatures",
-        images: [
-          "squidmar1.jpg",
-          "squidmar2.jpg",
-          "squidmar3.jpg"
-        ],
-        description: "Miniatures painted by Emil Nyström posted on his Instagram (https://www.instagram.com/squidmarminiatures/)"
-      }
-    };
-
-    Object.keys(artists).forEach(artistKey => {
-      const artist = artists[artistKey];
-
-      document.write(`
-        <div class="center-content">
-          <p style="font-size: 30px;"><strong>${artist.name}</strong></p>
-          <br>
-          <div class="image-container">
-            ${artist.images.map(image => `<img src="${image}" width="600" Height="700" alt="${artist.name}">`).join('')}
-          </div>
-          <br>
-          <p><cite>${artist.description}</cite></p>
-          <br>
-        </div>
-      `);
-    });
+  document.getElementById("demo").innerHTML +=
+    "<br>" + answer1 + answer2 + answer3;
+  
   });
+  
+   function toggleImages(artistId) {
+    var imageContainer = document.getElementById(artistId);
+    if (imageContainer.style.display === 'none') {
+      imageContainer.style.display = 'block';
+    } else {
+      imageContainer.style.display = 'none';
+    }
+  }
+ 
 </script>
 </body>
 </html>
