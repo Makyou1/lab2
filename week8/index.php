@@ -243,14 +243,20 @@ tr:nth-child(even) {
 <h2 style="color:#00bfff;"><strong>Introduction</strong></h2>
 <div id="profile-intro">
 	<img src="ART AND THE ARTIST.jpg" alt="art vs artist picture">
-    <p>This is the very first time I'm attempting to do a website. I hope it works out! <br>
-    My name is <strong>Marc Angelo A. Nerez</strong>, as stated above, I am <strong>34 years old</strong>. This is my 2nd course, and I'm eager to learn more about developing programs.<br>
+<?php
+function myMessage() {
+    echo '<p>This is the very first time I\'m attempting to do a website. I hope it works out! <br>';
+    echo 'My name is <strong>Marc Angelo A. Nerez</strong>, as stated above, I am <strong>34 years old</strong>. This is my 2nd course, and I\'m eager to learn more about developing programs.<br>';
 
-    I have two kids and i'm currently working as a <em>Customer Relations Manager</em> for a security agency. My work includes traveling locally if needed.<br>
+    echo 'I have two kids and I\'m currently working as a <em>Customer Relations Manager</em> for a security agency. My work includes traveling locally if needed.<br>';
 
-    Previously, I was a <em>Sales Professional</em> for <em>Makati Ford</em>, and before that, I was a <em>Citiphone Officer</em> for <em>Citibank BGC</em>.<br>
+    echo 'Previously, I was a <em>Sales Professional</em> for <em>Makati Ford</em>, and before that, I was a <em>Citiphone Officer</em> for <em>Citibank BGC</em>.<br>';
 
-	I'm from <em>Baguio City</em>!</p> 
+    echo 'I\'m from <em>Baguio City</em>!</p>';
+}
+
+myMessage();
+?>
 	</div>
 	
 <h1 id="personal-info" style="color:#00bfff;"><strong>Personal Information</strong></h1> <br>
