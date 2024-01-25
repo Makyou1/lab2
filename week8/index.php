@@ -184,6 +184,32 @@ tr:nth-child(even) {
   list-style: none;
   box-sizing: border-box;
   }
+.places-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  }
+
+.place-container {
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+  }
+
+.place-container:hover {
+  transform: scale(1.2); /* Zoom in by 20% */
+  }
+
+.place-container img {
+   width: 500px;
+   height: 400px;
+   border-radius: 30px;
+   transition: transform 0.3s;
+  }
+
+.place-container:hover img {
+   transform: scale(1.2);
+  }
   
 </style>
 </head>
@@ -202,7 +228,9 @@ tr:nth-child(even) {
 <li><a class="active" href="#profile-intro">Introduction</a></li>
 <li><a href="#personal-info">Personal Information</a></li>
 <li><a href="#hobbies">Hobbies</a></li>
+<li><a href="#travel-log">Travel log</a></li>
 <li><a href="#art">Art that I'm into</a></li>
+
 </div>
 </nav>
 
@@ -340,28 +368,30 @@ tr:nth-child(even) {
   </tr>
 </table>
 <br>
-<div class="content">
+<div id="travel-log">
   <h1 id="demo" style="color:#00bfff;"></h1>
   <br>
   <p style="text-align: center;" id="currentdate"></p>
   <br>
-  <h1 style="color:#00bfff;">Unforgettable Places I've Visited</h1>
+  <h1 style="color:#00bfff;">Unforgettable Places I've Visited</h1> <br>
+<div class="places-container">
+<?php
+  $places = array(
+    "Los Angeles, California" => "ibeen/Losangeles.jpg",
+    "Melbourne, Sydney" => "ibeen/Melbourne.jpg",
+    "Niagara, New York" => "ibeen/Niagara.jpg",
+    "New York, New York" => "ibeen/Newyork.jpg",
+    "Las Vegas, Nevada" => "ibeen/Lasvegas.jpg"
+  );
 
-  <?php
-  $C1 = "Los Angeles, California";
-  $C2 = "Hong Kong";
-  $C3 = "Sydney, Australia";
-  $C4 = "Coron, Palawan";
-  $C5 = "Coron, Palawan";
-  ?>
-
-  <ul>
-    <li><?php echo $C1; ?></li>
-    <li><?php echo $C2; ?></li>
-    <li><?php echo $C3; ?></li>
-    <li><?php echo $C4; ?></li>
-    <li><?php echo $C5; ?></li>
-  </ul>
+    foreach ($places as $place => $image) {
+      echo '<div class="place-container">';
+      echo '<img src="' . $image . '" alt="' . $place . '">';
+      echo '<p>' . $place . '</p>';
+      echo '</div>';
+    }
+    ?>
+</div>
 </div>
 <h1 id="art" style="color:#00bfff;"><strong>Art that I'm into (click the name to reveal their art)</strong></h1> <br>
 <h2 style="color:white;">Visual Arts</h2> <br>
