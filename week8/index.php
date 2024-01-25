@@ -243,19 +243,18 @@ tr:nth-child(even) {
 <h2 style="color:#00bfff;"><strong>Introduction</strong></h2>
 <div id="profile-intro">
 	<img src="ART AND THE ARTIST.jpg" alt="art vs artist picture">
-<?php
-function myMessage() {
-    echo '<p>This is the very first time I\'m attempting to do a website. I hope it works out! <br>';
-    echo 'My name is <strong>Marc Angelo A. Nerez</strong>, as stated above, I am <strong>34 years old</strong>. This is my 2nd course, and I\'m eager to learn more about developing programs.<br>';
+<?php  
+$x = '<p>This is the very first time I\'m attempting to do a website. I hope it works out! <br>';
+$x .= 'My name is <strong>Marc Angelo A. Nerez</strong>, as stated above, I am <strong>34 years old</strong>. This is my 2nd course, and I\'m eager to learn more about developing programs.<br>';
+$x .= 'I have two kids and I\'m currently working as a <em>Customer Relations Manager</em> for a security agency. My work includes traveling locally if needed.<br>';
+$x .= 'Previously, I was a <em>Sales Professional</em> for <em>Makati Ford</em>, and before that, I was a <em>Citiphone Officer</em> for <em>Citibank BGC</em>.<br>';
+$x .= 'I\'m from <em>Baguio City</em>!</p>';
 
-    echo 'I have two kids and I\'m currently working as a <em>Customer Relations Manager</em> for a security agency. My work includes traveling locally if needed.<br>';
-
-    echo 'Previously, I was a <em>Sales Professional</em> for <em>Makati Ford</em>, and before that, I was a <em>Citiphone Officer</em> for <em>Citibank BGC</em>.<br>';
-
-    echo 'I\'m from <em>Baguio City</em>!</p>';
+function myfunction() {
+  echo $GLOBALS['x'];
 }
 
-myMessage();
+myfunction();
 ?>
 	</div>
 	
