@@ -14,6 +14,7 @@
     font-family: Open Sans;
     display: flex;
     flex-direction: column;
+	margin: 0;
   }
   .musicians-container {
     display: flex;
@@ -114,6 +115,7 @@ a.active,a:hover {
     padding: 20px;
     margin-top: 100px;
     transition: margin-top 0.5s;
+
   }
 p, li {
     color: white;
@@ -139,10 +141,12 @@ tr:nth-child(even) {
   }
 
 #profile-intro {
-	display:flex;
-	align-items: center;
-
-	}
+    display: flex;
+    align-items: center;
+    background-color: blue;
+    border: 2px solid white;
+    padding: 20px;
+}
 #profile-intro img{
     width: 250px;
 	height: 250px;
@@ -158,6 +162,16 @@ tr:nth-child(even) {
 	margin: 0;
 	float: right;
 	}
+#hobbies {
+	background-color: #074f57;
+	background-image: url("paletepall.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white:
+	padding-top: 200px;
+	padding-bottom: 200px;
+	}
+
 
 .center-content {
     text-align: center;
@@ -197,7 +211,7 @@ tr:nth-child(even) {
   }
 
 .place-container:hover {
-  transform: scale(1.2); /* Zoom in by 20% */
+  transform: scale(1.1);
   }
 
 .place-container img {
@@ -208,7 +222,7 @@ tr:nth-child(even) {
   }
 
 .place-container:hover img {
-   transform: scale(1.2);
+   transform: scale(1.1);
   }
   
 </style>
@@ -381,13 +395,14 @@ myfunction();
   <h1 style="color:#00bfff;">Unforgettable Places I've Visited</h1> <br>
 <div class="places-container">
 <?php
-  $place = array(
-    "Los Angeles, California" => "ibeen/Losangeles.jpg",
-    "Melbourne, Sydney" => "ibeen/Melbourne.jpg",
-    "Niagara, New York" => "ibeen/Niagara.jpg",
-    "New York, New York" => "ibeen/Newyork.jpg",
-    "Las Vegas, Nevada" => "ibeen/Lasvegas.jpg"
-  );
+$places = array(
+  "Los Angeles, California" => "ibeen/Losangeles.jpg",
+  "Melbourne, Sydney" => "ibeen/Melbourne.jpg",
+  "Niagara, New York" => "ibeen/Niagara.jpg",
+  "New York, New York" => "ibeen/Newyork.jpg",
+  "Las Vegas, Nevada" => "ibeen/Lasvegas.jpg",
+  "Atlantic City, New Jersey" => "ibeen/Newjersey.jpg"
+);
 
     foreach ($places as $place => $image) {
       echo '<div class="place-container">';
