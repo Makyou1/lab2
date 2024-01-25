@@ -396,12 +396,12 @@ myfunction();
 <div class="places-container">
 <?php
 $places = array(
-  "Los Angeles, California" => "ibeen/Losangeles.jpg",
-  "Melbourne, Sydney" => "ibeen/Melbourne.jpg",
-  "Niagara, New York" => "ibeen/Niagara.jpg",
-  "New York, New York" => "ibeen/Newyork.jpg",
-  "Las Vegas, Nevada" => "ibeen/Lasvegas.jpg",
-  "Atlantic City, New Jersey" => "ibeen/Newjersey.jpg"
+  "Los Angeles, California" => "Losangeles.jpg",
+  "Melbourne, Australia" => "Melbourne.jpg",
+  "Niagara, New York" => "Niagara.jpg",
+  "New York, New York" => "Newyork.jpg",
+  "Las Vegas, Nevada" => "Lasvegas.jpg",
+  "Atlantic City, New Jersey" => "Newjersey.jpg"
 );
 
     foreach ($places as $place => $image) {
