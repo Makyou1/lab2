@@ -381,7 +381,7 @@ myfunction();
   <h1 style="color:#00bfff;">Unforgettable Places I've Visited</h1> <br>
 <div class="places-container">
 <?php
-  $places = array(
+  $place = array(
     "Los Angeles, California" => "ibeen/Losangeles.jpg",
     "Melbourne, Sydney" => "ibeen/Melbourne.jpg",
     "Niagara, New York" => "ibeen/Niagara.jpg",
