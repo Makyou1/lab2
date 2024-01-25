@@ -340,6 +340,29 @@ tr:nth-child(even) {
   </tr>
 </table>
 <br>
+<div class="content">
+  <h1 id="demo" style="color:#00bfff;"></h1>
+  <br>
+  <p style="text-align: center;" id="currentdate"></p>
+  <br>
+  <h1 style="color:#00bfff;">Unforgettable Places I've Visited</h1>
+
+  <?php
+  $C1 = "Los Angeles, California";
+  $C2 = "Hong Kong";
+  $C3 = "Sydney, Australia";
+  $C4 = "Coron, Palawan";
+  $C5 = "Coron, Palawan";
+  ?>
+
+  <ul>
+    <li><?php echo $C1; ?></li>
+    <li><?php echo $C2; ?></li>
+    <li><?php echo $C3; ?></li>
+    <li><?php echo $C4; ?></li>
+    <li><?php echo $C5; ?></li>
+  </ul>
+</div>
 <h1 id="art" style="color:#00bfff;"><strong>Art that I'm into (click the name to reveal their art)</strong></h1> <br>
 <h2 style="color:white;">Visual Arts</h2> <br>
 <div class="center-content">
