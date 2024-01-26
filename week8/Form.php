@@ -1,8 +1,22 @@
-<!DOCTYPE HTML>  
+<!DOCTYPE html>
 <html>
 <head>
+<title>Marc Nerez Personal Profile</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta charset="utf-8">
+<meta name="Makki's Profile" content="width=device-width, initial-scale=1.0">
+<link rel= "stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <style>
-.error {color: #FF0000;}
+  body {
+    background-color: black;
+    color: white;
+    font-family: Open Sans;
+    display: flex;
+    flex-direction: column;
+	margin: 0;
+  }
+.error {color: red;}
 </style>
 </head>
 <body>  
