@@ -115,10 +115,17 @@ echo $gender;
 ?>
 
 <?php
+//for local host
+//$servername = "localhost";
+//$username = "root";
+//$password = "";
+//$dbname = "myDB";
+
+// for socit cloud
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "myDB";
+$username = "webprogmi222_sf221";
+$password = "xE*Y2nleNVvZm[!!";
+$dbname = "webprogmi222_sf221";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
